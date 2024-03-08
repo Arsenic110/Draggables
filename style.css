@@ -1,0 +1,129 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100 !important;
+    color: white;
+
+    font-size: larger;
+    background-color:#322f31;
+
+    transition: all 0.5s ease;
+}
+
+.flex-container
+{
+    border-radius:3rem;
+    padding:1.7rem;
+    margin:1rem;
+
+    background-color:#474747;
+
+    display:flex;
+
+    flex-flow: row wrap;
+
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    gap: 0.2rem;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: 100 !important;
+}
+
+.drag-style
+{
+    background-color: inherit;
+    border: 1.7rem solid #322f31;
+
+    border-radius:3rem;
+    padding:1.7rem;
+
+    background-color: #322f31;
+}
+
+.code
+{
+    background-color: #373737;
+    border-radius: 5px;
+    padding: 3px;
+    font-family: Consolas;
+
+    font-size: medium;
+}
+
+.flex-member
+{
+    border: 0rem solid #373737;
+    border-radius: 3rem;
+
+    background-color: #373737;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    
+}
+
+
+.flex-pfp
+{
+
+    animation-name: flow-from-left-roll;
+    animation-duration: 1.5s;
+
+    border: 1rem solid #373737;
+
+    position: relative;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    width: 15em;
+    height: 15em;
+}
+
+.flex-pfp img
+{
+    transform-origin: center;
+    position: inherit;
+
+
+
+    overflow: hidden;
+}
+
+.flex-pfp .main-pfp
+{
+    position: inherit;
+
+    max-width: 105%;
+    width: 105%;
+    height: 105%;
+
+    left: -129%;
+    top: -15%;
+}
+
+.flex-pfp .main-pfp-background
+{
+    transform-origin: center;
+    position: inherit;
+
+    max-width: 120%;
+    max-height: 120%;
+
+    left: -10%;
+    top: -9%;
+
+    overflow: hidden;
+}
+
+.flex-title
+{
+    border: 1rem solid #373737;
+    float: right;
+
+} 

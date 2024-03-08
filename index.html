@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Draggables.js demo!</title>
+
+        <meta property="og:title" content="Arsen.icu" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arsen.icu" />
+        <meta property="og:image" content="https://arsen.icu/res/keith.png" />
+    
+        <meta property="og:description" content="Arsenicu's website!" />
+        <meta name="theme-color" content="#00CCFF">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="linkStyle.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="flex-member;">
+                <h1>Draggables.js demo!</h1>
+            <p>Move the div out of the way!</p>
+
+            <div class="drag drag-style">
+                <h1>Drag me!</h1>
+                <p>Lol unfortunately I have not yet figured out how to kill the momentum if you grab it while its moving.</p>
+
+                <div style="display: flex;">
+                    <div class="flex-member flex-pfp">
+                        <img src="https://arsen.icu/res/pastel-rainbow.png" class="main-pfp-background" style="transform: rotate(45deg)" alt="pfp">
+                        <img src="https://arsen.icu/res/keith.png" class="main-pfp" alt="pfp">
+                    </div>
+                    <div class="flex-member flex-title">
+                        <h1>
+                            <span id="title-name">Made with love!<br>by <a href="https://arsen.icu"><span class="rainbow">Arsenicu</span></a></span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Documentation</h1>
+
+            <h2>Easy Start</h2>
+            <p>Start by linking the script with <span class="code">&lt;script src=&quot;https://cdn.statically.io/gh/Arsenic110/Draggables/main/draggables.js&quot;&gt;&lt;/script&gt;</span><br>You can use whichever CDN you like, here I use <a href="https://cdn.statically.min.io/">statically.io</a>!</p>
+            <p>Then, you need to call the <span class="code">makeDraggable(HTMLCollection)</span> function on the collection of elements you wish to make draggable. These are referred as <i>'draggables'</i>.</p>
+            <p>This can be easily achieved with something like:<br><span class="code">&lt;script&gt;makeDraggable(document.getElementsByClassName(&quot;drag&quot;))&lt;/script&gt;</span></p>
+
+            <h2>Configuration</h2>
+            <p>The library makes use of the <span class="code">window.drag</span> JSON object for configuration.<br>
+            For simplicity, these values are preset by default, but you can change them at simply by changing the values at runtime, after the <span class="code">makeDraggable(HTMLCollection)</span> function has been ran.</p>
+            <p>
+            {
+                <ul>
+                    <li><span class="code">zTop:444</span> - default zIndex all draggables are elevated to.</li>
+                    <li><span class="code">offset:15</span> - mouse grab offset, it is resolution-specific, not sure how to calculate this :p</li>
+                    <li><span class="code">momentum</span> - nested JSON object used for the physics behavior;</li>
+                    {
+                        <ul>
+                            <li><span class="code">speed:1</span> - multiplier to velocity, natural motion is 1. Higher = faster.</li>
+                            <li><span class="code">spaceFriction:0.8</span> - friction the draggable experiences while moving through space. 1 = no friction, 0 = solid matter.</li>
+                            <li><span class="code">wallFriction:0.7</span> - simulates plastic collision behavior, i.e. applies an instant burst of friction when the draggable hits a wall.</li>
+                        </ul>
+                    }
+                </ul>
+            }
+            </p>
+            </div>
+            
+
+            <script src="https://cdn.statically.io/gh/Arsenic110/Draggables/main/draggables.min.js"></script>   
+            <script>makeDraggable(document.getElementsByClassName("drag"))</script>
+            <script src="https://arsen.icu/js/app.js"></script>
+        </div>
+    </body>
+</html>
